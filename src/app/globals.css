@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    height: 100%;
+  }
+
+  body {
+    @apply overflow-hidden bg-desk-via font-sans text-ink antialiased;
+    /* Wallpaper: layered radial washes over a diagonal gradient — no image payload. */
+    background-image: radial-gradient(1100px 700px at 12% 8%, rgba(255, 255, 255, 0.22) 0%, transparent 55%),
+      radial-gradient(900px 600px at 88% 82%, rgba(37, 99, 235, 0.28) 0%, transparent 60%),
+      linear-gradient(145deg, #5b7fb5 0%, #3f5f8f 48%, #2a3f5f 100%);
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  :focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply border border-white/40 bg-white/85 backdrop-blur-os;
+  }
+  .glass-bar {
+    @apply border-t border-white/35 bg-white/40 backdrop-blur-os;
+  }
+  /* Chips used across Skills, Coursework, and tech-stack tags. */
+  .chip {
+    @apply rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-medium text-ink-soft;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
