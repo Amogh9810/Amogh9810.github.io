@@ -173,9 +173,11 @@ function Certificates() {
         <Card key={i}>
           <CardTitle>{cert.title}</CardTitle>
           <p className="mt-1 text-sm text-ink-soft">{cert.issuer}</p>
-          <p className="mt-0.5 text-xs text-ink-faint">{cert.date}</p>
+          {cert.date && <p className="mt-0.5 text-xs text-ink-faint">{cert.date}</p>}
           <a
             href={cert.credentialUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="mt-4 inline-block text-sm font-medium text-accent transition-colors hover:text-blue-700"
           >
             View credential &rarr;

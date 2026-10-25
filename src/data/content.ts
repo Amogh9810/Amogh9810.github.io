@@ -171,7 +171,26 @@ export interface CertificateEntry {
   credentialUrl: string;
 }
 
-export const CERTIFICATES: CertificateEntry[] = []; // add your certificates here
+export const CERTIFICATES: CertificateEntry[] = [
+  {
+    title: "Foundation Certificate",
+    issuer: "IIT Madras",
+    date: "", // add month/year if you like
+    credentialUrl: "https://drive.google.com/file/d/17nlDfreR6DVZOcPEhMXcm54o3SXPgEQr/view?usp=sharing",
+  },
+  {
+    title: "Advanced Certificate",
+    issuer: "IIT Madras",
+    date: "",
+    credentialUrl: "https://drive.google.com/file/d/1GirFNvRX1FyW6uejpkLFt8vTGxvGKFb1/view?usp=sharing",
+  },
+  {
+    title: "Diploma in Data Science",
+    issuer: "IIT Madras",
+    date: "",
+    credentialUrl: "https://drive.google.com/file/d/1KsOnvtgtGFaR0thAVpaYiooEmUrPzG1E/view?usp=sharing",
+  },
+];
 
 /* -------------------------------------------------------------------------- */
 /* SKILLS                                                                      */
