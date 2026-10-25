@@ -21,24 +21,24 @@ export const SOCIAL_LINKS: SocialLink[] = [
   {
     icon: FaPhone,
     label: "Phone",
-    href: "tel:+910000000000", // TODO: replace with real phone number
+    href: "tel:+919717910874",
   },
   {
     icon: FaLinkedin,
     label: "LinkedIn",
-    href: "#", // TODO: add LinkedIn URL
+    href: "https://www.linkedin.com/in/amogh-sharma-27137a322/",
     external: true,
   },
   {
     icon: FaGithub,
     label: "GitHub",
-    href: "#", // TODO: add GitHub URL
+    href: "https://github.com/Amogh9810",
     external: true,
   },
   {
     icon: FaInstagram,
     label: "Instagram",
-    href: "#", // TODO: add Instagram URL
+    href: "https://www.instagram.com/amogh_x9810?igsh=MWNsMngydGtxdGZxcw==&igsi=MWNsMngydGtxdGZxcw==",
     external: true,
   },
 ];

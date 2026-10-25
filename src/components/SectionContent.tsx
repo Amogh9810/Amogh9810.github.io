@@ -47,10 +47,10 @@ function Resume() {
         </ul>
       </div>
 
-      {/* TODO: place your real PDF at /public/resume.pdf */}
       <a
         href={RESUME.fileUrl}
-        download
+        target="_blank"
+        rel="noopener noreferrer"
         className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-accent px-5 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-blue-700 sm:w-auto"
       >
         <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
@@ -136,18 +136,26 @@ function Projects() {
             ))}
           </ul>
           <div className="mt-4 flex gap-4">
-            <a
-              href={project.repoUrl}
-              className="text-sm font-medium text-accent transition-colors hover:text-blue-700"
-            >
-              GitHub &rarr;
-            </a>
-            <a
-              href={project.liveUrl}
-              className="text-sm font-medium text-ink-faint transition-colors hover:text-ink"
-            >
-              Live Demo &rarr;
-            </a>
+            {project.repoUrl && (
+              <a
+                href={project.repoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-medium text-accent transition-colors hover:text-blue-700"
+              >
+                GitHub &rarr;
+              </a>
+            )}
+            {project.liveUrl && (
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-medium text-accent transition-colors hover:text-blue-700"
+              >
+                Live Demo &rarr;
+              </a>
+            )}
           </div>
         </Card>
       ))}
@@ -156,6 +164,9 @@ function Projects() {
 }
 
 function Certificates() {
+  if (CERTIFICATES.length === 0) {
+    return <p className="text-sm text-ink-soft">Certificates coming soon.</p>;
+  }
   return (
     <div className="grid gap-4 sm:grid-cols-2">
       {CERTIFICATES.map((cert, i) => (
@@ -225,8 +236,8 @@ function Contact() {
   const links = [
     { label: "Email", value: CONTACT.email, href: `mailto:${CONTACT.email}` },
     { label: "Phone", value: CONTACT.phone, href: `tel:${CONTACT.phone.replace(/\s+/g, "")}` },
-    { label: "GitHub", value: "github.com/placeholder", href: CONTACT.github },
-    { label: "LinkedIn", value: "linkedin.com/in/placeholder", href: CONTACT.linkedin },
+    { label: "GitHub", value: CONTACT.github.replace("https://", ""), href: CONTACT.github },
+    { label: "LinkedIn", value: CONTACT.linkedin.replace("https://www.", ""), href: CONTACT.linkedin },
   ];
 
   return (

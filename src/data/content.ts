@@ -13,15 +13,15 @@
 /* -------------------------------------------------------------------------- */
 
 export const RESUME = {
-  /** TODO: drop your real PDF at /public/resume.pdf (or change this path). */
-  fileUrl: "/resume.pdf",
-  headline: "Your Name — Your Title",
+  /** Hosted on Google Drive — swap for "/resume.pdf" if you later drop the file into /public instead. */
+  fileUrl: "https://drive.google.com/file/d/1tm7iBPQJ_PR5KjEql2VBqu9LqfPB2MUU/view?usp=sharing",
+  headline: "Amogh Sharma — Frontend Developer & Data Scientist",
   summary:
-    "Placeholder summary line. Replace this with a one or two sentence professional summary that sits above the download button.",
+    "Dual-degree student (IIT Madras + JIIT Noida) working across frontend development, full-stack engineering, and machine learning — currently a Frontend Developer Intern at Atomity.",
   highlights: [
-    "Placeholder highlight one",
-    "Placeholder highlight two",
-    "Placeholder highlight three",
+    "Frontend Developer Intern at Atomity, building production UIs in Next.js, React, and TypeScript",
+    "Shipped full-stack projects spanning AI/OCR pipelines, hospital management systems, and gamified learning platforms",
+    "Strong foundation in data science and ML — NumPy, Pandas, Scikit-Learn, PyTorch",
   ],
 };
 
@@ -39,18 +39,41 @@ export interface EducationEntry {
 
 export const EDUCATION: EducationEntry[] = [
   {
-    institute: "Institute Name Placeholder 1",
-    degree: "Degree Placeholder 1",
-    dateRange: "Month Year — Month Year",
-    cgpa: "CGPA 0.0",
-    coursework: ["Course One", "Course Two", "Course Three", "Course Four", "Course Five"],
+    institute: "Indian Institute of Technology, Madras",
+    degree: "Bachelor of Science in Data Science and Applications",
+    dateRange: "May 2024 — June 2028",
+    cgpa: "CGPA 7.2",
+    coursework: [
+      "Python Programming",
+      "Data Structures and Algorithms",
+      "Linear Algebra",
+      "Probability Theory and Statistics",
+      "Database Management Systems (SQL)",
+      "Exploratory Data Analysis",
+      "Machine Learning",
+      "Data Visualization Techniques",
+      "Software Engineering",
+    ],
   },
   {
-    institute: "Institute Name Placeholder 2",
-    degree: "Degree Placeholder 2",
-    dateRange: "Month Year — Month Year",
-    cgpa: "CGPA 0.0",
-    coursework: ["Course One", "Course Two", "Course Three", "Course Four"],
+    institute: "Jaypee Institute of Information Technology",
+    degree: "Bachelor of Technology in Mathematics and Computer Science",
+    dateRange: "May 2024 — May 2028",
+    cgpa: "CGPA 7.5",
+    coursework: [
+      "Data Structures & Algorithms",
+      "Discrete Mathematics",
+      "Linear Algebra",
+      "Probability Theory & Statistics",
+      "Differential Calculus",
+      "Numerical Methods",
+      "Object-Oriented Programming",
+      "Database Management Systems",
+      "Computer Networks",
+      "Machine Learning",
+      "Optimization Techniques",
+      "Graph Theory",
+    ],
   },
 ];
 
@@ -68,26 +91,26 @@ export interface ExperienceEntry {
 
 export const EXPERIENCE: ExperienceEntry[] = [
   {
-    company: "Company Name Placeholder 1",
-    role: "Role Placeholder 1",
-    dateRange: "Month Year — Present",
-    location: "Location Placeholder",
+    company: "Atomity",
+    role: "Frontend Developer Intern",
+    dateRange: "July 2026 — Present",
+    location: "Remote",
     points: [
-      "Placeholder bullet point describing a responsibility or achievement.",
-      "Placeholder bullet point describing a responsibility or achievement.",
-      "Placeholder bullet point describing a responsibility or achievement.",
-      "Placeholder bullet point describing a responsibility or achievement.",
+      "Developed and enhanced responsive user interfaces using Next.js, React, TypeScript, and Tailwind CSS.",
+      "Built reusable UI components including News pages, CTA sections, layouts, and responsive interfaces following the company's design system.",
+      "Improved frontend performance and maintainability by fixing UI inconsistencies, responsive layout issues, spacing, and styling bugs across multiple pages.",
+      "Collaborated using Git/GitLab workflow, working on feature branches and delivering production-ready code for the Atomity platform.",
     ],
   },
   {
-    company: "Company Name Placeholder 2",
-    role: "Role Placeholder 2",
-    dateRange: "Month Year — Month Year",
-    location: "Location Placeholder",
+    company: "Cognifyz Technologies",
+    role: "Software Engineering Intern",
+    dateRange: "May 2025 — June 2025",
+    location: "Remote",
     points: [
-      "Placeholder bullet point describing a responsibility or achievement.",
-      "Placeholder bullet point describing a responsibility or achievement.",
-      "Placeholder bullet point describing a responsibility or achievement.",
+      "Implemented 6 end-to-end applications using Python including games, CRUD systems, file handling, automation, and web scraping projects.",
+      "Developed a Task Manager using Object-Oriented Programming and persistent file storage with modular architecture.",
+      "Created a web scraper processing 100+ records per execution while maintaining clean, reusable Python code.",
     ],
   },
 ];
@@ -106,32 +129,34 @@ export interface ProjectEntry {
 
 export const PROJECTS: ProjectEntry[] = [
   {
-    name: "Project Name Placeholder 1",
-    description: "Short placeholder description of what this project does and why it exists.",
-    stack: ["Tech One", "Tech Two", "Tech Three"],
-    repoUrl: "#", // TODO: add link
-    liveUrl: "#", // TODO: add link
+    name: "SmartPrep AI (AI Study Planner)",
+    description:
+      "AI-powered study planner with automated syllabus management. Uses an OCR + NLP pipeline (EasyOCR + spaCy) to extract and structure topics from uploaded syllabus documents — a 2,000+ LOC full-stack system.",
+    stack: ["Next.js", "FastAPI", "Supabase", "EasyOCR", "spaCy"],
+    repoUrl: "https://github.com/Amogh9810/SmartPrepAI",
+    liveUrl: "", // no live deployment yet
   },
   {
-    name: "Project Name Placeholder 2",
-    description: "Short placeholder description of what this project does and why it exists.",
-    stack: ["Tech One", "Tech Two"],
-    repoUrl: "#", // TODO: add link
-    liveUrl: "#", // TODO: add link
+    name: "MediFlow (Hospital Appointment & Queue Management System)",
+    description:
+      "Full-stack hospital management platform. Resolved critical security vulnerabilities (JWT issues, SQL injection, authorization bypasses, credential exposure) and fixed backend N+1 queries, race conditions, and frontend memory leaks across 1,500+ LOC covering queue management, appointment booking, and physician scheduling.",
+    stack: ["Next.js", "Node.js", "Express", "PostgreSQL", "Prisma"],
+    repoUrl: "https://github.com/Amogh9810/MediFlow",
+    liveUrl: "https://mediflow-1-s528.onrender.com/",
   },
   {
-    name: "Project Name Placeholder 3",
-    description: "Short placeholder description of what this project does and why it exists.",
-    stack: ["Tech One", "Tech Two", "Tech Three", "Tech Four"],
-    repoUrl: "#", // TODO: add link
-    liveUrl: "#", // TODO: add link
+    name: "QuestED",
+    description: "Gamified learning platform — over 1,200 lines of code.",
+    stack: ["React", "JavaScript"],
+    repoUrl: "https://github.com/Amogh9810/QuestED-Gamified-Learning-Collaboration-Hub",
+    liveUrl: "", // no live deployment yet
   },
   {
-    name: "Project Name Placeholder 4",
-    description: "Short placeholder description of what this project does and why it exists.",
-    stack: ["Tech One", "Tech Two"],
-    repoUrl: "#", // TODO: add link
-    liveUrl: "#", // TODO: add link
+    name: "Eco-Ride",
+    description: "Travel planner built with a React frontend and Flask backend — over 1,500 lines of code.",
+    stack: ["React", "Flask"],
+    repoUrl: "https://github.com/Amogh9810/Eco-travel-Project-In-Process-",
+    liveUrl: "", // no live deployment yet
   },
 ];
 
@@ -146,20 +171,7 @@ export interface CertificateEntry {
   credentialUrl: string;
 }
 
-export const CERTIFICATES: CertificateEntry[] = [
-  {
-    title: "Certificate Title Placeholder 1",
-    issuer: "Issuer Placeholder",
-    date: "Month Year",
-    credentialUrl: "#", // TODO: add link
-  },
-  {
-    title: "Certificate Title Placeholder 2",
-    issuer: "Issuer Placeholder",
-    date: "Month Year",
-    credentialUrl: "#", // TODO: add link
-  },
-];
+export const CERTIFICATES: CertificateEntry[] = []; // add your certificates here
 
 /* -------------------------------------------------------------------------- */
 /* SKILLS                                                                      */
@@ -171,10 +183,22 @@ export interface SkillGroup {
 }
 
 export const SKILLS: SkillGroup[] = [
-  { category: "Category 1", items: ["Skill A", "Skill B", "Skill C", "Skill D"] },
-  { category: "Category 2", items: ["Skill A", "Skill B", "Skill C"] },
-  { category: "Category 3", items: ["Skill A", "Skill B", "Skill C", "Skill D", "Skill E"] },
-  { category: "Category 4", items: ["Skill A", "Skill B", "Skill C"] },
+  {
+    category: "Languages",
+    items: ["C++", "Python", "Java", "SQL", "TypeScript", "JavaScript", "HTML", "CSS"],
+  },
+  {
+    category: "Frameworks & Frontend",
+    items: ["React", "Next.js", "Tailwind CSS", "Figma"],
+  },
+  {
+    category: "Data & ML",
+    items: ["NumPy", "Pandas", "Matplotlib", "Scikit-Learn", "PyTorch", "Jupyter Notebook"],
+  },
+  {
+    category: "Tools & Platforms",
+    items: ["Git", "GitHub", "Docker", "VS Code", "Postman", "Anaconda"],
+  },
 ];
 
 /* -------------------------------------------------------------------------- */
@@ -187,17 +211,17 @@ export const SKILLS: SkillGroup[] = [
  */
 export const INTRO = {
   title: "Amogh Sharma's Portfolio",
-  subtitle: "Frontend Developer & Data Scientist",
+  subtitle: "20 — Engineer, Builder",
 };
 
 export const ABOUT = {
-  name: "Your Name Placeholder",
-  title: "Your Title Placeholder",
-  bio: "This is placeholder About Me text. Write two or three sentences about who you are, what you build, and what you are currently working towards. Replace this paragraph with your own words.",
+  name: "Amogh Sharma",
+  title: "Frontend Developer & Data Scientist",
+  bio: "I'm a dual-degree student pursuing a BS in Data Science and Applications at IIT Madras alongside a BTech in Mathematics and Computer Science at JIIT Noida. My work spans frontend development, full-stack engineering, and machine learning — currently building production UIs as a Frontend Developer Intern at Atomity.",
   facts: [
-    { label: "Location", value: "Placeholder City" },
-    { label: "Focus", value: "Placeholder Focus" },
-    { label: "Status", value: "Placeholder Status" },
+    { label: "Location", value: "Delhi, India" },
+    { label: "Focus", value: "Frontend & Data Science" },
+    { label: "Status", value: "Frontend Intern @ Atomity" },
   ],
 };
 
@@ -206,9 +230,9 @@ export const ABOUT = {
 /* -------------------------------------------------------------------------- */
 
 export const CONTACT = {
-  email: "placeholder@example.com", // TODO: add real email
-  phone: "+00 00000 00000", // TODO: add real phone
-  github: "#", // TODO: add link
-  linkedin: "#", // TODO: add link
+  email: "sharmaamogh1010@gmail.com",
+  phone: "+91 97179 10874",
+  github: "https://github.com/Amogh9810",
+  linkedin: "https://www.linkedin.com/in/amogh-sharma-27137a322/",
 };
 
